@@ -80,5 +80,26 @@ app.layout = html.Div([
 
 app.run(debug=True, use_reloader=False)
 
+#Import the libraries needed to run the code
+import pandas as pd
+import sqlalchemy as sa
+import plotly.express as px
+import plotly.graph_objects as go
+from sqlalchemy.engine import create_engine
+
+# Connecting to the HPlusSport database
+engine = create_engine("mysql+pymysql://mariadb:mariadb@localhost/hplussport?charset=utf8mb4")
+connection = engine.connect()
+
+#Let's take a peak at our data. This code shows the first 5 records
+df = pd.read_sql_query("SELECT * FROM V_CustomerOrderSummary",
+                       connection)
+df.head()
+
+![Alt image](https://github.com/anjami-a/SQL-SALES-PROJECT-/blob/823f8e32f45525767516f0cf4c5dc87e3246e9ab/Screenshot%202025-04-20%20at%206.08.41%20AM.png)   
+
+#Now we'll make a simple bar chart of sales by year
+fig = px.bar(df, x='State', y='Total_Sales')
+fig.show()
 
 
