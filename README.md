@@ -100,7 +100,7 @@ df.head()
 
 ![Alt image](https://github.com/anjami-a/SQL-SALES-PROJECT-/blob/823f8e32f45525767516f0cf4c5dc87e3246e9ab/Screenshot%202025-04-20%20at%206.08.41%20AM.png)   
 
-### Now we'll make a simple bar chart of sales by state
+### Below is a simple bar chart of sales by state
 fig = px.bar(df, x='State', y='Total_Sales')
 fig.show()
 
