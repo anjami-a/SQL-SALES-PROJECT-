@@ -1,2 +1,2 @@
-# SQL-SALES-PROJECT-
-Interactive sales dashbaord by state 
+# SQL-PROJECT-
+A collection of my SQL files  
