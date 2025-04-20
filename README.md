@@ -79,3 +79,6 @@ app.layout = html.Div([
 ])
 
 app.run(debug=True, use_reloader=False)
+
+![image alt] (https://github.com/anjami-a/SQL-SALES-PROJECT-/blob/823f8e32f45525767516f0cf4c5dc87e3246e9ab/Screenshot%202025-04-20%20at%206.08.41%20AM.png) 
+
