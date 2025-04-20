@@ -1,5 +1,5 @@
 # SQL-PROJECTS-
-A collection of my SQL files  
+A collection of my SQL files for my LinkedIn Learning SLQ for Data Analysis Final Data Visualization Project.
 
 
 # Creating a Web-based Dashboard using Dash
