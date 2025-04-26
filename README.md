@@ -62,6 +62,11 @@ fig.add_trace(
            text=list(df.Max_Due.round(1)),
            textposition="auto"))
 
+![image](https://github.com/anjami-a/SQL-SALES-PROJECT-/blob/main/Screenshot%202025-04-20%20at%206.08.41%20AM.png)
+![image](https://github.com/anjami-a/SQL-SALES-PROJECT-/blob/main/Screenshot%202025-04-26%20at%207.44.41%20AM.png)
+![image](https://github.com/anjami-a/SQL-SALES-PROJECT-/blob/main/Screenshot%202025-04-26%20at%207.44.48%20AM.png)
+![image](https://github.com/anjami-a/SQL-SALES-PROJECT-/blob/main/Screenshot%202025-04-26%20at%207.44.52%20AM.png)
+
 ### We need only once trace to be visible at a time (controlled via buttons), below is how I defined the interactive buttons for the chart
 
 label_list = [
