@@ -1,7 +1,30 @@
 # SQL-PROJECTS-
 A collection of my SQL files for my LinkedIn Learning SLQ for Data Analysis Final Data Visualization Project.
 
+##INTERACTIVE DASHBOARD BY STATE FOR SALES
 
+### We will create a View from Order Summary 
+ CREATE VIEW V_CustomerOrderSummary as
+SELECT State,
+  AVG(TotalDue) as Avg_Due,
+  MIN(TotalDue) as Min_Due,
+  MAX(TotalDue) as Max_Due,
+  SUM(TotalDue) as Total_Sales
+FROM Customer C
+  JOIN Orders O ON O.CustomerID = C.CustomerID
+GROUP BY State
+
+### The view of our V_Orders
+CREATE OR REPLACE VIEW V_Orders AS
+SELECT O.CreationDate AS OrderDate,
+  CONCAT(S.FirstName, ' ', S.LastName) AS Salesperson,
+  COUNT(1) AS 'Amount of Orders',
+  SUM(TotalDue) AS 'Total Due'
+FROM Orders O
+  join Salesperson S ON(O.SalespersonID = S.SalespersonID)
+GROUP BY O.CreationDate,
+  concat(S.FirstName, ' ', S.LastName)
+  
 # Creating a Web-based Dashboard using Dash
 import dash
 from dash import dcc
@@ -105,4 +128,8 @@ fig = px.bar(df, x='State', y='Total_Sales')
 fig.show()
 
 ![image](https://github.com/user-attachments/assets/f71ebb60-dc32-4f9a-a6e5-fa87de914e54)
+
+
+
+  
 
